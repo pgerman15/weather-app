@@ -1,0 +1,25 @@
+.coordinate-lookup-Container {
+    display: flex;
+    flex-direction: column;
+}
+
+.location-input {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.result-list {
+    list-style: none;
+    padding: 8px;
+}
+
+.coordinate-result-row {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgba(0, 0, 0, 0.87);
+    padding: 8px;
+}
+
+.coordinate-result-item {
+    flex: 1
+}

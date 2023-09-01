@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
 import './App.css';
+import CoordinateLookup from './components/coordinateLookup/CoordinateLookup';
 
 function App() {
-
   return (
     <div className="App">
+        <CoordinateLookup />
     </div>
   );
 }
