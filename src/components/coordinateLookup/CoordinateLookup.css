@@ -11,6 +11,11 @@
 .result-list {
     list-style: none;
     padding: 8px;
+    position: absolute;
+    height: 128px;
+    overflow:auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .coordinate-result-row {
@@ -18,6 +23,7 @@
     flex-direction: row;
     border: 1px solid rgba(0, 0, 0, 0.87);
     padding: 8px;
+    min-height: 24px;
 }
 
 .coordinate-result-item {
