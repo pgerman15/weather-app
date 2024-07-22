@@ -1,21 +1,28 @@
-.coordinate-lookup-Container {
+.coordinate-lookup-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: end;
 }
 
 .location-input {
+    display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: end;
 }
 
-.result-list {
+.result-list-display {
     list-style: none;
-    padding: 8px;
-    position: absolute;
-    height: 128px;
+    padding: 0px;
     overflow:auto;
     margin-left: auto;
     margin-right: auto;
+    background-color: lightgrey;
+}
+
+.result-list-hide {
+    display: none;
 }
 
 .coordinate-result-row {

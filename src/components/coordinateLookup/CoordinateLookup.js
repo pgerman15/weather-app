@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './CoordinateLookup.css';
 import axios from 'axios'
+import SearchIcon from '@mui/icons-material/Search';
 
 const CoordinateResult = ({result, setHomeLocation}) => {
 
@@ -22,8 +23,6 @@ function CoordinateLookup({homeLocation, setHomeLocation}) {
   const [searchResults, setSearchResults] = useState([]);
   const geolocationURL = 'https://geocode.maps.co/search';
 
-  console.log('Set home location: ', setHomeLocation);
-
   const selectHomeLocation = (location) => {
     setSearchResults([]);
     setHomeLocation(location);
@@ -40,18 +39,16 @@ function CoordinateLookup({homeLocation, setHomeLocation}) {
 
   return (
     <div className="coordinate-lookup-container">
-        <span>Selected location: {homeLocation?.display_name}</span>
+        <span>{homeLocation?.display_name}</span>
         <div className="location-input">
             <input onChange={(e) => { setAddressSearch(e.target.value) }}/>
-            <button onClick={lookupCoordinates}>Lookup</button>
+            <SearchIcon onClick={lookupCoordinates}></SearchIcon>
         </div>
-        <div>
-            <ul className="result-list">
-                {
-                    searchResults.map((result) => <CoordinateResult result={result} setHomeLocation={() => { selectHomeLocation(result) }} />)
-                }
-            </ul>
-        </div>
+        <ul className={searchResults.length > 0 ? 'result-list-display' : 'result-list-hide'}>
+            {
+                searchResults.map((result) => <CoordinateResult result={result} setHomeLocation={() => { selectHomeLocation(result) }} />)
+            }
+        </ul>
     </div>
   );
 }

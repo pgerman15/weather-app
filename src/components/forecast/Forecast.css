@@ -1,0 +1,76 @@
+.forecast-list {
+    list-style: none;
+    padding: 0px;
+    overflow:auto;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+}
+
+.current-forecast {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 8px;
+}
+
+.current-forecast-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 48px;
+}
+
+.current-forecast-description {
+    font-size: 24px;
+    margin-left: 16px;
+}
+
+.current-forecast-data span {
+    margin-right: 128px;
+}
+
+.icon svg {
+    font-size: 64px;
+}
+
+.day-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hourly-list {
+    padding: 0px;
+    margin: 0px;
+}
+
+.forecast-list>li {
+    display: flex;
+    flex-direction: column;
+}
+
+ul.hourly-list>li {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.76);
+    padding: 8px 16px;
+}
+
+ul.hourly-list>li>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex: 1;
+}
+
+li.day-time {
+    background-color: white;
+};
+
+li.night-time {
+    background-color: darkgrey;
+}

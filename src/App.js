@@ -11,7 +11,6 @@ function App() {
       let location = null;
       try {
         location = JSON.parse(localStorage.getItem('currentLocation'));
-        console.log('Local storage location: ', JSON.stringify(location, null, 2));
         if (location) {
           setHomeLocation(location);
         }
@@ -31,8 +30,11 @@ function App() {
 
   return (
     <div className="App">
+      <header>
+        <h3>R/C Weather</h3>
         <CoordinateLookup homeLocation={homeLocation} setHomeLocation={storeLocation} />
-        <Forecast longitude={homeLocation?.lon} latitude={homeLocation?.lat} />
+      </header>
+      <Forecast longitude={homeLocation?.lon} latitude={homeLocation?.lat} />
     </div>
   );
 }
